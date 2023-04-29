@@ -1,4 +1,5 @@
 //import {  Text, View, Button } from 'react-native';
+// tener en cuanta la sigueinte pag https://reactnavigation.org/docs/auth-flow/
 //LIBRERIAS PARA EL MANEJO DE L NAVEGACION ENTRE PANTALLAS
 import { NavigationContainer} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
