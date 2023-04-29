@@ -20,8 +20,15 @@ export default function Register (){
         <Button title='Register'
         onPress={()=>{
           navigation.navigate('Car',{username:username,name:name ,password:password })
+        }}    
+        />
+        
+        <Button title='Log In'
+        onPress={()=>{
+          navigation.navigate('User',{username:username,password:password })
         }}
         />
+        
       </View>
     )
 }

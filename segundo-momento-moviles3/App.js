@@ -9,6 +9,36 @@ import User from './screens/User';
 import Rent from './screens/Rent';
 import Car from './screens/Car';
 
+const Stack = createNativeStackNavigator();
+
+const getIsSignedIn = () => {
+  // custom logic
+  return true;
+};
+
+export default function App() {
+  const isSignedIn = getIsSignedIn();
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        {isSignedIn ? (
+          <>
+            <Stack.Screen name="Home" component={User} />
+            <Stack.Screen name="Profile" component={Car} />
+            <Stack.Screen name="Settings" component={Rent} />
+          </>
+        ) : (
+          <>
+            <Stack.Screen name="SignIn" component={User} />
+            <Stack.Screen name="SignUp" component={User} />
+          </>
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
 
 
 function UserScreen() {
@@ -35,7 +65,6 @@ function RentScreen() {
   );
 }
 
-const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
@@ -47,10 +76,4 @@ function MyTabs() {
   );
 }
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
-  );
-}
+
