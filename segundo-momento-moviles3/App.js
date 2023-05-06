@@ -6,9 +6,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 //
-import User from './screens/User';
+import User from './screens/HomeScreen';
 import Rent from './screens/Rent';
-import Car from './screens/Car';
+import Car from './screens/CarScreen';
+import HomeScreen from './screens/HomeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,12 +19,24 @@ const getIsSignedIn = () => {
 };
 
 export default function App() {
-  const isSignedIn = getIsSignedIn();
+  //const isSignedIn = getIsSignedIn();
 
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {isSignedIn ? (
+      
+          <>
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Settings" component={Rent} />
+          </>
+       
+          <>
+            <Stack.Screen name="SignIn" component={User} />
+            <Stack.Screen name="SignUp" component={User} />
+          </>
+
+        {/*  {isSignedIn ? (
           <>
             <Stack.Screen name="Home" component={User} />
             <Stack.Screen name="Profile" component={Car} />
@@ -34,7 +47,7 @@ export default function App() {
             <Stack.Screen name="SignIn" component={User} />
             <Stack.Screen name="SignUp" component={User} />
           </>
-        )}
+        )} */} 
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -45,7 +58,7 @@ export default function App() {
 function UserScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
+      <Text>Home</Text>
     </View>
   );
 }
