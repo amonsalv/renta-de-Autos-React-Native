@@ -10,31 +10,27 @@ import User from './screens/HomeScreen';
 import Rent from './screens/Rent';
 import Car from './screens/CarScreen';
 import HomeScreen from './screens/HomeScreen';
+import LoginScreen from './screens/LoginScreen';
+import HomeTabs from './screens/HomeTabs';
 
 const Stack = createNativeStackNavigator();
 
+/*
 const getIsSignedIn = () => {
   // custom logic
   return true;
-};
+}*/
 
 export default function App() {
   //const isSignedIn = getIsSignedIn();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-      
-          <>
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Settings" component={Rent} />
-          </>
+      <Stack.Navigator initialRouteName='HomeTabs'>
+            <Stack.Screen name="HomeTabs" component={HomeTabs} />
+        
        
-          <>
-            <Stack.Screen name="SignIn" component={User} />
-            <Stack.Screen name="SignUp" component={User} />
-          </>
+       
 
         {/*  {isSignedIn ? (
           <>
@@ -54,7 +50,7 @@ export default function App() {
 }
 
 
-
+/*
 function UserScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -90,4 +86,4 @@ function MyTabs() {
   );
 }
 
-
+*/
