@@ -129,10 +129,10 @@ export default  function RegisterScreen({ navigation })  {
       </Button>
       <i
         onClick={() => {
-          navigation.navigate("login");
+          navigation.navigate("Login");
         }}
       >
-        ¿Ya tienes cuenta? Ingresa
+        ¿Ya tienes cuenta? ve a login
       </i>
     </View>
   );

@@ -4,7 +4,7 @@ import  HomeScreen  from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import RegisterScreen from './RegisterScreen';
 import CarScreen from './CarScreen';
-import Rent from './RentScreen';
+import ListOfCars from './ListOfCars';
 import RentScreen from './RentScreen';
 
 const Tab = createBottomTabNavigator();
@@ -26,10 +26,13 @@ export default function HomeTabs(){
          <Tab.Screen name='Registro' component={RegisterScreen} options={{
             tabBarIcon: () => (<MaterialIcons name="login" size={25}/>)
         }}/>   
-                <Tab.Screen name='car' component={CarScreen} options={{
+                <Tab.Screen name='Car' component={CarScreen} options={{
             tabBarIcon: () => (<FontAwesome5 name="car-alt" size={24} color="black" />)
         }}/>
-                        <Tab.Screen name='Rent a Car' component={RentScreen} options={{
+                        <Tab.Screen name='Rent' component={RentScreen} options={{
+            tabBarIcon: () => (<MaterialIcons name="car-rental" size={24} color="black" />)
+        }}/>
+                                <Tab.Screen name='listOfCars' component={ListOfCars} options={{
             tabBarIcon: () => (<MaterialIcons name="car-rental" size={24} color="black" />)
         }}/>
 {/*

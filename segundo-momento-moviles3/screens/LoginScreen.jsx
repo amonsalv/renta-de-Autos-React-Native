@@ -45,7 +45,7 @@ import { useEffect, useState } from "react";
       if (logeado) {
         reset();
         setLoggin(true);
-        navigation.navigate("car", user);
+        navigation.navigate("Car", user);
       } else {
         setLoggin(false);
       }
@@ -114,7 +114,7 @@ import { useEffect, useState } from "react";
         </Button>
         <i
           onClick={() => {
-            navigation.navigate("Register");
+            navigation.navigate("Registro");
           }}
         >
           ¿No tienes cuenta? Regístrate
