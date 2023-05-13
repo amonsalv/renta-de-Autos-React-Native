@@ -1,10 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {MaterialIcons} from '@expo/vector-icons';
+import {MaterialIcons, FontAwesome5} from '@expo/vector-icons';
 import  HomeScreen  from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import RegisterScreen from './RegisterScreen';
 import CarScreen from './CarScreen';
 import Rent from './RentScreen';
+import RentScreen from './RentScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,11 +26,11 @@ export default function HomeTabs(){
          <Tab.Screen name='Registro' component={RegisterScreen} options={{
             tabBarIcon: () => (<MaterialIcons name="login" size={25}/>)
         }}/>   
-                <Tab.Screen name='Create a Car' component={CarScreen} options={{
-            tabBarIcon: () => (<MaterialIcons name="car" size={25}/>)
+                <Tab.Screen name='car' component={CarScreen} options={{
+            tabBarIcon: () => (<FontAwesome5 name="car-alt" size={24} color="black" />)
         }}/>
-                        <Tab.Screen name='Rent a Car' component={Rent} options={{
-            tabBarIcon: () => (<MaterialIcons name="car" size={25}/>)
+                        <Tab.Screen name='Rent a Car' component={RentScreen} options={{
+            tabBarIcon: () => (<MaterialIcons name="car-rental" size={24} color="black" />)
         }}/>
 {/*
         

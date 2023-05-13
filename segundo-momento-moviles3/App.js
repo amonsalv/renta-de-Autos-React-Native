@@ -1,21 +1,31 @@
 //import {  Text, View, Button } from 'react-native';
 // tener en cuanta la sigueinte pag https://reactnavigation.org/docs/auth-flow/
 //LIBRERIAS PARA EL MANEJO DE L NAVEGACION ENTRE PANTALLAS
-import { NavigationContainer} from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Image } from "react-native";
 
 //screens
-import LoginScreen from './screens/LoginScreen';
-import Register from './screens/RegisterScreen';
-import Car from './screens/CarScreen'
-import ListOfCars from './screens/ListOfCars'
-import RentCar from './screens/RentScreen';
+import LoginScreen from "./screens/LoginScreen";
+import Register from "./screens/RegisterScreen";
+import Car from "./screens/CarScreen";
+import ListOfCars from "./screens/ListOfCars";
+import RentCar from "./screens/RentScreen";
 
 //import User from './screens/HomeScreen';
 //import Rent from './screens/Rent';
 
-import HomeScreen from './screens/HomeScreen';
-import HomeTabs from './screens/HomeTabs';
+//import HomeScreen from "./screens/HomeScreen";
+import HomeTabs from "./screens/HomeTabs";
+
+function HeaderLogo() {
+  return (
+    <Image
+      source={require("./assets/car-rent.png")}
+      style={{ width: 380, height: 120, marginTop:50, marginLeft:-20 }}
+    />
+  );
+}
 
 const Stack = createNativeStackNavigator();
 
@@ -30,11 +40,19 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='HomeTabs'>
-            <Stack.Screen name="HomeTabs" component={HomeTabs} />
-        
-       
-       
+      <Stack.Navigator initialRouteName="HomeTabs">
+      {/*<Stack.Screen name="HomeTabs" component={HomeTabs} />*/}  
+        <Stack.Screen
+          name="HomeTabs"
+          component={HomeTabs}
+          options={{
+            headerTitle: () => <HeaderLogo />,
+           // headerTitleAlign: "",
+            headerStyle: {
+              backgroundColor: "#FFF",
+            },
+          }}
+        />
 
         {/*  {isSignedIn ? (
           <>
@@ -47,12 +65,11 @@ export default function App() {
             <Stack.Screen name="SignIn" component={User} />
             <Stack.Screen name="SignUp" component={User} />
           </>
-        )} */} 
+        )} */}
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
 
 /*
 function UserScreen() {

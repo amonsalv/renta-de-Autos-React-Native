@@ -112,7 +112,7 @@ export default function CarScreen ({ navigation, route }) {
       </Button>
       <i
         onClick={() => {
-          navigation.navigate("listOfCars", {carsRegisted,users});
+          navigation.navigate("listOfCars", {carRent,users});
         }}
       >
         Ver todos los autos en venta

@@ -7,22 +7,24 @@ import { Text, View, Linking, TouchableOpacity } from 'react-native';
 import { TextInput, Button, Checkbox } from 'react-native-paper';
 import { useForm, Controller } from "react-hook-form";
 import React, { useState, useEffect } from 'react';
+import {MaterialIcons, FontAwesome5} from '@expo/vector-icons';
 import { CheckBox } from 'react-native-elements'; //npm install @rneui/themed @rneui/base
 import { Icon } from 'react-native-vector-icons/FontAwesome'; //npm i react-native-vector-icons
 import { styles } from "../assets/styles/styles";
 //
 import {carsRegisted} from './CarScreen';
+//import {}
 
 
 export const rentCars = [];
 
 export default function RentScreen({navigation}){
-  const [selectedDate, setSelectedDate] = useState(new Date());
+ // const [selectedDate, setSelectedDate] = useState(new Date());
 
     const [errormess, setErrormess ] = useState('');
     const {control, handleSubmit, formState: {errors}, reset} = useForm();
     
-    //Fecha
+    /*/Fecha
     const showDatePicker = () => {
       setDatePickerVisibility(true);
     };
@@ -35,7 +37,7 @@ export default function RentScreen({navigation}){
       setSelectedDate(date);
       hideDatePicker();
 
-    };
+    };*/
 
     // para guardar
     const verifiedUsuario = (data) => {
@@ -45,7 +47,7 @@ export default function RentScreen({navigation}){
       const carroRegistradoChecked = carrosRegistrados && carrosRegistrados.find((u) => u.isChecked === data.isChecked);
 
     if(usuarioRegistrado){
-        console.log(usuariosRegistrados, 'arreglo usuario');
+        console.log(usuarios, 'arreglo usuario');
 
         if(carroRegistrado){
             console.log(carrosRegistrados, 'arreglo carro');
@@ -56,7 +58,7 @@ export default function RentScreen({navigation}){
                     platenumber: data.platenumber, 
                     brand: data.brand,
                     isChecked: "no disponible", 
-                    selectedDate: selectedDate,
+                  //  selectedDate: selectedDate,
 
                   };
                   rentCars.push(nuevoCarroRentar);
@@ -135,9 +137,11 @@ export default function RentScreen({navigation}){
       
       {errors.platenumber?.type=="required" && <Text style={{ color: 'red' }}>La placa es requerida</Text>}
      
-      {/* --------  FECHA INPUT ------ */}
+      {/* --------  FECHA INPUT
+            <Calendar value={selectedDate} onChange={setSelectedDate} />
+       ------ */}
       
-      <Calendar value={selectedDate} onChange={setSelectedDate} />
+
 
 
       <Text style={{color:'red'}}>{errormess}</Text>

@@ -45,7 +45,7 @@ import { useEffect, useState } from "react";
       if (logeado) {
         reset();
         setLoggin(true);
-        navigation.navigate("CreateCar", user);
+        navigation.navigate("car", user);
       } else {
         setLoggin(false);
       }
