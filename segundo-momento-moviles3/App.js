@@ -9,7 +9,7 @@ import LoginScreen from './screens/LoginScreen';
 import Register from './screens/RegisterScreen';
 import Car from './screens/CarScreen'
 import ListOfCars from './screens/ListOfCars'
-import RentCar from './screens/Rent';
+import RentCar from './screens/RentScreen';
 
 //import User from './screens/HomeScreen';
 //import Rent from './screens/Rent';

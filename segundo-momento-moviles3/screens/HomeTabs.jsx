@@ -4,7 +4,7 @@ import  HomeScreen  from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import RegisterScreen from './RegisterScreen';
 import CarScreen from './CarScreen';
-import Rent from './Rent';
+import Rent from './RentScreen';
 
 const Tab = createBottomTabNavigator();
 
