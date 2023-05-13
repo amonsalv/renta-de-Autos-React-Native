@@ -3,14 +3,18 @@
 //LIBRERIAS PARA EL MANEJO DE L NAVEGACION ENTRE PANTALLAS
 import { NavigationContainer} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Text, View } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-//
-import User from './screens/HomeScreen';
-import Rent from './screens/Rent';
-import Car from './screens/CarScreen';
-import HomeScreen from './screens/HomeScreen';
+
+//screens
 import LoginScreen from './screens/LoginScreen';
+import Register from './screens/RegisterScreen';
+import Car from './screens/CarScreen'
+import ListOfCars from './screens/ListOfCars'
+import RentCar from './screens/Rent';
+
+//import User from './screens/HomeScreen';
+//import Rent from './screens/Rent';
+
+import HomeScreen from './screens/HomeScreen';
 import HomeTabs from './screens/HomeTabs';
 
 const Stack = createNativeStackNavigator();
