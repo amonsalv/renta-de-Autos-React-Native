@@ -4,12 +4,16 @@ import { Text, View } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 import { useForm, Controller } from "react-hook-form";
 //import { CheckBox } from 'react-native-elements';
-import { Icon } from 'react-native-vector-icons/FontAwesome';
+import { Icon } from 'react-native-vector-icons/FontAwesome';//npm i react-native-vector-icons
 import { styles } from "../assets/styles/styles";
 import { useState } from "react";
-let cars = [];
+//
+import {rentCars} from './RentScreen'
 
-export default function Car ({ navigation, route }) {
+
+export const carsRegisted = [];
+
+export default function CarScreen ({ navigation, route }) {
   let users = route.params
   const [existente, setExistente] = useState();
   const {
@@ -26,18 +30,18 @@ export default function Car ({ navigation, route }) {
 
   const onSubmit = (dataForm) => {
     const { platenumber, brand } = dataForm;
-    const carroExistente = cars.find((car) => car.platenumber == platenumber);
+    const carroExistente = carsRegisted.find((car) => car.platenumber == platenumber);
     if (carroExistente) {
       setExistente(true);
       return;
     } else {
       setExistente(false);
-      cars.push({
+      carsRegisted.push({
         platenumber: platenumber,
         brand: brand,
         state: true,
       });
-      console.log(cars);
+      console.log(carsRegisted);
       reset();
     }
   };
@@ -108,7 +112,7 @@ export default function Car ({ navigation, route }) {
       </Button>
       <i
         onClick={() => {
-          navigation.navigate("listOfCars", {cars,users});
+          navigation.navigate("listOfCars", {carsRegisted,users});
         }}
       >
         Ver todos los autos en venta
