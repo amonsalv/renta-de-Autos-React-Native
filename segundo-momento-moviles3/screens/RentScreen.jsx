@@ -60,7 +60,7 @@ export default function RentScreen({navigation}){
                     platenumber: data.platenumber, 
                     brand: data.brand,
                     isChecked: "no disponible", 
-                  //  selectedDate: selectedDate,
+                    selectedDate: selectedDate,
 
                   };
                   rentCars.push(nuevoCarroRentar);
@@ -162,7 +162,7 @@ export default function RentScreen({navigation}){
         icon=""
         mode="contained" 
         onPress={() =>{           
-            navigation.navigate('CarrosGuardados',{rentCars})         
+            navigation.navigate('Car',{rentCars})         
         }}>
          <Text style={styles.buttonText}>Carros Rentados</Text>
         </Button>
@@ -172,7 +172,7 @@ export default function RentScreen({navigation}){
         icon=""
         mode="contained" 
         onPress={() =>{           
-            navigation.navigate('CarrosGuardados',{carrosRegistrados})         
+            navigation.navigate('listOfCars')         
         }}>
          <Text style={styles.buttonText}>Carros Registrados</Text>
         </Button>
