@@ -18,11 +18,20 @@ import RentCar from "./screens/RentScreen";
 //import HomeScreen from "./screens/HomeScreen";
 import HomeTabs from "./screens/HomeTabs";
 
+/*function HeaderLogo() {
+  return (
+    <div style={{ width: '100%', maxWidth: '100%', height: 'auto', marginTop: '2rem', marginLeft: 'auto', marginRight: 'auto' }}>
+      <img source={require("./assets/car-rent.png")} alt="Banner" style={{ width: '100%', height: 'auto' }} />
+    </div>
+  );
+}*/
+
+
 function HeaderLogo() {
   return (
     <Image
       source={require("./assets/car-rent.png")}
-      style={{ width: 380, height: 120, marginTop:50, marginLeft:-20 }}
+      style={{ width: 380, height: 120, marginTop:50, marginLeft:-20}}
     />
   );
 }

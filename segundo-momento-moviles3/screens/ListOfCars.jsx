@@ -1,5 +1,6 @@
 import { styles } from "../assets/styles/styles";
 import { Text, View, FlatList, TouchableOpacity } from "react-native";
+import {carsRegisted} from "./CarScreen";
 
 
 
