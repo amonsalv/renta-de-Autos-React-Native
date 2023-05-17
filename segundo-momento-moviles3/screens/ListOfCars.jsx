@@ -1,11 +1,54 @@
 import { styles } from "../assets/styles/styles";
 import { Text, View, FlatList, TouchableOpacity } from "react-native";
 import {carsRegisted} from "./CarScreen";
+import {rentCars} from "./RentScreen";
 
 
+export default function ListOfCars({route}) {
+  const carsRegisted = route.params?.carsRegisted;
+  const rentCars = route.params?.rentCars;
+  
+  return(
+    <View style={styles.containerProfile}>
+        <FlatList
+          data={carsRegisted}
+          renderItem={({ item }) => (
+          <Text style={styles.parrafo}>
+           {`Placa: ${item.platenumber}, 
+          brand: ${item.brand}, 
+          Disponibilidad: ${item.isChecked ? 'No disponible ❌' : 'Disponible ✅'}`}
+          
+          </Text>
+      )}
+      keyExtractor={item => item.platenumber}
+    />
+    
+  
+     <FlatList
+          data={rentCars}
+          renderItem={({ item }) => (
+        <Text style={styles.parrafo}>
+          {`Usuario: ${item.usuario},
+          Placa: ${item.platenumber}, 
+          brand: ${item.brand}, 
+          Disponibilidad: ${item.isChecked}.
+          rentado para el dia: ${item.selectedDate.toLocaleDateString()}
+          `}
+          </Text>         
+      )}
+      keyExtractor={item => item.platenumber}
+    />
+    
+      </View>
 
-function ListOfCars({ cars, users, navigation }) {
-  const rentCarInfo = {};
+      
+      
+    );
+    
+  }
+ 
+
+  /*const rentCarInfo = {};
   const handlePress = (item) => {
     console.log(`El elemento con placa ${item.platenumber} fue presionado!`);
     rentCarInfo.platenumber = item.platenumber;
@@ -56,4 +99,4 @@ export default function Cars({ route, navigation }) {
   ) : (
     <HasNoCars></HasNoCars>
   );
-}
+}*/
