@@ -31,7 +31,7 @@ function HeaderLogo() {
   return (
     <Image
       source={require("./assets/car-rent.png")}
-      style={{ width: 380, height: 120, marginTop:50, marginLeft:-20}}
+      style={{ width: 380, height: 70, marginLeft:-20}}
     />
   );
 }

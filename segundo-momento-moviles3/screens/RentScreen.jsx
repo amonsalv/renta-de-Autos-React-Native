@@ -11,20 +11,22 @@ import {MaterialIcons, FontAwesome5} from '@expo/vector-icons';
 import { CheckBox } from 'react-native-elements'; //npm install @rneui/themed @rneui/base
 import { Icon } from 'react-native-vector-icons/FontAwesome'; //npm i react-native-vector-icons
 import { styles } from "../assets/styles/styles";
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 //
-import {carsRegisted} from './CarScreen';
-//import {}
+import {carsRegisted} from "./CarScreen";
+import {userRegistred} from "./RegisterScreen";
 
 
 export const rentCars = [];
 
 export default function RentScreen({navigation}){
- // const [selectedDate, setSelectedDate] = useState(new Date());
+ const [selectedDate, setSelectedDate] = useState(new Date());
 
     const [errormess, setErrormess ] = useState('');
     const {control, handleSubmit, formState: {errors}, reset} = useForm();
     
-    /*/Fecha
+    //Fecha
     const showDatePicker = () => {
       setDatePickerVisibility(true);
     };
@@ -37,20 +39,20 @@ export default function RentScreen({navigation}){
       setSelectedDate(date);
       hideDatePicker();
 
-    };*/
+    };
 
     // para guardar
     const verifiedUsuario = (data) => {
         
-      const usuarioRegistrado = usuariosRegistrados.find((u) => u.usuario === data.usuario);
-      const carroRegistrado = carrosRegistrados.find((u) => u.platenumber === data.platenumber)
-      const carroRegistradoChecked = carrosRegistrados && carrosRegistrados.find((u) => u.isChecked === data.isChecked);
+      const usuarioRegistrado = users.find((u) => u.usuario === data.usuario);
+      const carroRegistrado = carsRegisted.find((u) => u.platenumber === data.platenumber)
+      const carroRegistradoChecked = carsRegisted && carsRegisted.find((u) => u.isChecked === data.isChecked);
 
     if(usuarioRegistrado){
         console.log(usuarios, 'arreglo usuario');
 
         if(carroRegistrado){
-            console.log(carrosRegistrados, 'arreglo carro');
+            console.log(carsRegisted, 'arreglo carro');
 
             if(carroRegistrado.isChecked === false){
                 const nuevoCarroRentar = { 
@@ -62,8 +64,8 @@ export default function RentScreen({navigation}){
 
                   };
                   rentCars.push(nuevoCarroRentar);
-                  const index = carrosRegistrados.indexOf(carroRegistrado);
-                  carrosRegistrados[index] = { ...carroRegistrado, isChecked: "no disponible", rentadoPor: data.usuario };
+                  const index = carsRegisted.indexOf(carroRegistrado);
+                  carsRegisted[index] = { ...carroRegistrado, isChecked: "no disponible", rentadoPor: data.usuario };
                   setErrormess('');
                   reset();
                  console.log(carroRegistrado.brand)
@@ -71,8 +73,8 @@ export default function RentScreen({navigation}){
                   navigation.navigate('CarrosGuardados', {rentCars});
 
             }else{
-                setErrormess('Este carro no está disponible para rentar - gilma')
-                console.log("El carro no está disponible - gilma");
+                setErrormess('Este carro no está disponible para rentar')
+                console.log("El carro no está disponible");
             }
         }else{
             setErrormess('Este carro no está registrado')

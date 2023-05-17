@@ -3,27 +3,15 @@ import { TextInput, Button } from "react-native-paper"; //npm install react-nati
 import { useForm, Controller } from "react-hook-form"; //npm install react-hook-form
 import { styles } from "../assets/styles/styles";
 import { useState } from "react";
-const users = [
-  { username: "ana", name: "ana monsalve", password: "12345" },
-];
+
 //  const Stack = createNativeStackNavigator();
 
+const users= []
 
-export default  function RegisterScreen({ navigation })  {
+export default function RegisterScreen({ navigation }) {
   const [existente, setExistente] = useState();
   const [texto, setTexto] = useState();
-  const {
-    handleSubmit,
-    control,
-    formState: { errors },
-    reset,
-  } = useForm({
-    defaultValues: {
-      username: "",
-      name: "",
-      password: "",
-    },
-  });
+  const {handleSubmit,control,formState: { errors },reset,} = useForm({defaultValues: {username: "",name: "",password: "",},});
 
   const onSubmit = (dataForm) => {
     const { username, name, password } = dataForm;
@@ -40,7 +28,7 @@ export default  function RegisterScreen({ navigation })  {
       console.log(username, name, password, users);
     }
     setTimeout(() => {
-      navigation.navigate("Login",{users:users} );
+      navigation.navigate("Login", { users: users });
     }, 3000);
   };
   return (
