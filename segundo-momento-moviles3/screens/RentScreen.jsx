@@ -15,7 +15,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 //
 import {carsRegisted} from "./CarScreen";
-import {userRegistred} from "./RegisterScreen";
+import {users} from "./RegisterScreen";
 
 
 export const rentCars = [];
@@ -177,11 +177,6 @@ export default function RentScreen({navigation}){
          <Text style={styles.buttonText}>Carros Registrados</Text>
         </Button>
 
-
-
-
-    
-     
 
       </View>
 
