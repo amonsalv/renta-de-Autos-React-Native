@@ -16,8 +16,10 @@
 Aquí puedes ver algunas capturas de pantalla de la aplicación:
 
 ![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/0832d8c7-8328-44a9-8245-b2d29e4cd1c9)
-![Captura de pantalla 2](screenshots/screenshot2.png)
-![Captura de pantalla 3](screenshots/screenshot3.png)
+![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/d06846c5-8a02-4b75-800c-7b60b2b3f45d)
+![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/352de625-e229-4004-a166-080dd870de2a)
+![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/6bbb0bef-093a-4751-82c8-ec8281f11eda)
+![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/9ce72f87-34e8-49f0-99f7-44f656cf80ad)
 
 ## Instalación
 
