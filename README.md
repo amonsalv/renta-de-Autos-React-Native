@@ -1,19 +1,17 @@
-# Renta de Autos en react Native
+# Car Rental in react Native
 
-¡Bienvenido al repositorio de Renta de Autos en react Native! Este proyecto se desarrolló utilizando React Native y tiene como objetivo proporcionar una aplicación móvil para gestionar momentos especiales.
+Welcome to the Car Rental repository in react Native! This project was developed using React Native and aims to provide a mobile app to manage special moments.
 
-## Funcionalidades
+## Functionalities
 
-- Registro y inicio de sesión de usuarios.
-- Creación y edición de momentos.
-- Visualización de momentos existentes.
-- Compartir momentos a través de diferentes plataformas.
-- Comentarios y likes en los momentos.
-- Notificaciones push para recordar eventos importantes.
+- User registration and login.
+- Creating and editing Autos.
+- Visualization of existing Auos.
 
-## Capturas de pantalla
 
-Aquí puedes ver algunas capturas de pantalla de la aplicación:
+## Screenshots
+
+Here you can see some screenshots of the application:
 
 ![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/0832d8c7-8328-44a9-8245-b2d29e4cd1c9)
 ![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/d06846c5-8a02-4b75-800c-7b60b2b3f45d)
@@ -21,21 +19,21 @@ Aquí puedes ver algunas capturas de pantalla de la aplicación:
 ![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/6bbb0bef-093a-4751-82c8-ec8281f11eda)
 ![image](https://github.com/amonsalv/segundomomentomoviles3/assets/91292255/9ce72f87-34e8-49f0-99f7-44f656cf80ad)
 
-## Instalación
+## Installation
 
-Sigue estos pasos para ejecutar la aplicación de manera local:
+Follow these steps to run the application locally:
 
-1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
+1. Clone this repository on your local machine using the following command:
    ```
-   git clone https://github.com/amonsalv/segundomomentomoviles3.git
-   ```
-
-2. Navega hasta el directorio del proyecto:
-   ```
-   cd segundomomentomoviles3
+   git clone https://github.com/amonsalv/renta-de-Autos-React-Native.git
    ```
 
-3. Instala las dependencias utilizando el gestor de paquetes `npm` o `yarn`:
+2. Navigate to the project directory:
+   ```
+   cd car-rental-React-Native
+   ```
+
+3. Install the dependencies using the `npm` or `yarn` package manager:
    ```
    npm install
    ```
@@ -44,12 +42,12 @@ Sigue estos pasos para ejecutar la aplicación de manera local:
    yarn install
    ```
 
-4. Inicia el servidor de desarrollo de React Native:
+4. Start the React Native development server:
    ```
    npm start
    ```
 
-5. Abre un emulador o conecta tu dispositivo móvil y ejecuta la aplicación:
+5. Open an emulator or connect your mobile device and run the app:
    ```
    npm run android
    ```
@@ -58,41 +56,41 @@ Sigue estos pasos para ejecutar la aplicación de manera local:
    npm run ios
    ```
 
-## Contribución
+## Contribute
 
-Si deseas contribuir a este proyecto, sigue estos pasos:
+If you want to contribute to this project, follow these steps:
 
-1. Haz un fork de este repositorio.
+1. Make a fork of this repository.
 
-2. Crea una rama con la funcionalidad o corrección que deseas agregar:
+2. Create a branch with the functionality or fix you want to add:
    ```
-   git checkout -b mi-nueva-funcionalidad
-   ```
-
-3. Realiza los cambios necesarios y realiza commits claros para cada cambio:
-   ```
-   git commit -m "Agrega mi nueva funcionalidad"
+   git checkout -b my-new-functionality
    ```
 
-4. Sube los cambios a tu repositorio:
+3. Make the necessary changes and perform clear commits for each change:
    ```
-   git push origin mi-nueva-funcionalidad
+   git commit -m "Add my-new-functionality"
    ```
 
-5. Abre un Pull Request en este repositorio y describe los cambios que realizaste.
+4. Upload the changes to your repository:
+   ```
+   git push origin my-new-functionality
+   ```
 
-Agradecemos cualquier contribución que puedas hacer para mejorar este proyecto.
+5. Open a Pull Request in this repository and describe the changes you made.
 
-## Autores
+We welcome any contributions you can make to improve this project.
+
+## Authors
 
 - Ana Maria Monsalve @amonsalv
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT. Puedes consultar el archivo [LICENSE](LICENSE) para obtener más detalles.
+This project is licensed under the MIT License. You can refer to the [LICENSE](LICENSE) file for more details.
 
 ---
 
-Esperamos que disfrutes usando Segundo Momento Móviles. Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue en este repositorio.
+We hope you enjoy using Segundo Momento Móviles. If you have any questions or suggestions, feel free to open an issue in this repository.
 
-¡Gracias por tu interés y apoyo!
+Thanks for your interest and support!
