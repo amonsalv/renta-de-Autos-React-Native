@@ -30,7 +30,7 @@ Follow these steps to run the application locally:
 
 2. Navigate to the project directory:
    ```
-   cd car-rental-React-Native
+   cd renta-de-Autos-React-Native
    ```
 
 3. Install the dependencies using the `npm` or `yarn` package manager:
