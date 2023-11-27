@@ -44,16 +44,16 @@ Follow these steps to run the application locally:
 
 4. Start the React Native development server:
    ```
-   npm start
+   npx react-native start
    ```
 
-5. Open an emulator or connect your mobile device and run the app:
+5. Open an emulator or connect your mobile device and run the application:
    ```
-   npm run android
+   npx react-native run-android
    ```
-   o
+   or
    ```
-   npm run ios
+   npx react-native run-ios
    ```
 
 ## Contribute

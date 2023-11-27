@@ -115,6 +115,7 @@ export default function RentScreen({navigation}){
       />
       {errors.usuario?.type=="required" && <Text style={{ color: 'red' }}>El usuario es requerido</Text>}
       
+      <View style={{ marginBottom: 14 }}></View>
 
 <Controller
         control={control}
@@ -138,11 +139,35 @@ export default function RentScreen({navigation}){
       />
       
       {errors.platenumber?.type=="required" && <Text style={{ color: 'red' }}>La placa es requerida</Text>}
-     
-      {/* --------  FECHA INPUT
-            <Calendar value={selectedDate} onChange={setSelectedDate} />
-       ------ */}
-      
+   
+    {/* --------  FECHA INPUT */}
+    <Controller
+      control={control}
+      rules={{
+        required: true,
+        pattern: {
+          value: /^\d{2}\/\d{2}\/\d{4}$/,
+          message: "Formato de fecha inválido (dd/mm/yyyy)"
+        }
+      }}
+      render={({ field: { onChange, onBlur, value } }) => (
+        <TextInput
+          placeholder=""
+          onBlur={onBlur}
+          onChangeText={onChange}
+          value={value}
+          mode="outlined"
+          label="Fecha"
+          theme={styles.theme}
+          left={<TextInput.Icon icon="calendar"/>}
+        />
+      )}
+      name="fecha"
+      defaultValue=""
+    />
+    {errors.fecha?.type=="required" && <Text style={{ color: 'red' }}>La fecha es requerida</Text>}
+    {errors.fecha?.type=="pattern" && <Text style={{ color: 'red' }}>Formato de fecha inválido (dd/mm/yyyy)</Text>}
+    
 
 
 
@@ -150,7 +175,7 @@ export default function RentScreen({navigation}){
 
        <Button 
           icon={() => <MaterialIcons name="login" color="#fff" size={24} />}
-          style={styles.button}            
+          style={[styles.button, {marginBottom: 10}]}            
           mode="contained" 
           title="Rentar" 
           onPress={handleSubmit(verifiedUsuario)}>
@@ -158,7 +183,7 @@ export default function RentScreen({navigation}){
         </Button>
 
         <Button 
-        style={styles.buttonRentados} 
+        style={[styles.buttonRentados, {marginBottom: 10}]} 
         icon=""
         mode="contained" 
         onPress={() =>{           
@@ -179,5 +204,39 @@ export default function RentScreen({navigation}){
 
 
       </View>
+      
 
-    )};
+    )};    import moment from 'moment';
+
+    // ...
+
+    <Controller
+      control={control}
+      rules={{
+        required: true,
+        pattern: {
+          value: /^\d{2}\/\d{2}\/\d{4}$/,
+          message: "Formato de fecha inválido (dd/mm/yyyy)"
+        },
+        validate: {
+          validDate: (value) => moment(value, 'DD/MM/YYYY', true).isValid()
+        }
+      }}
+      render={({ field: { onChange, onBlur, value } }) => (
+        <TextInput
+          placeholder=""
+          onBlur={onBlur}
+          onChangeText={onChange}
+          value={value}
+          mode="outlined"
+          label="Fecha"
+          theme={styles.theme}
+          left={<TextInput.Icon icon="calendar"/>}
+        />
+      )}
+      name="fecha"
+      defaultValue=""
+    />
+    {errors.fecha?.type=="required" && <Text style={{ color: 'red' }}>La fecha es requerida</Text>}
+    {errors.fecha?.type=="pattern" && <Text style={{ color: 'red' }}>Formato de fecha inválido (dd/mm/yyyy)</Text>}
+    {errors.fecha?.type=="validDate" && <Text style={{ color: 'red' }}>Fecha inválida</Text>}
