@@ -1,22 +1,24 @@
 //import {  Text, View, Button } from 'react-native';
 // tener en cuanta la sigueinte pag https://reactnavigation.org/docs/auth-flow/
 //LIBRERIAS PARA EL MANEJO DE L NAVEGACION ENTRE PANTALLAS
+import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Image } from "react-native";
+import { Image, Text, View  } from "react-native";
 
 //screens
-import LoginScreen from "./screens/LoginScreen";
-import Register from "./screens/RegisterScreen";
-import Car from "./screens/CarScreen";
-import ListOfCars from "./screens/ListOfCars";
-import RentCar from "./screens/RentScreen";
+// Remove unused imports
+// import LoginScreen from "./screens/LoginScreen";
+// import Register from "./screens/RegisterScreen";
+// import Car from "./screens/CarScreen";
+// import ListOfCars from "./screens/ListOfCars";
+// import RentCar from "./screens/RentScreen";
 
 //import User from './screens/HomeScreen';
 //import Rent from './screens/Rent';
 
 //import HomeScreen from "./screens/HomeScreen";
-import HomeTabs from "./screens/HomeTabs";
+import HomeTabs from "./screens/HomeTabs.jsx";
 
 
 function HeaderLogo() {
